@@ -4,7 +4,7 @@ from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, filte
 from telegram.ext import CommandHandler
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
-BOT_TOKEN = "8087042295:AAF9MuPGwAkqtwWy6H0lYcs1Aiyf8YqJfqc"
+BOT_TOKEN = "_API_KEY_"
 
 # Main Menu
 async def set_bot_commands(application):
@@ -28,13 +28,13 @@ async def about_bot(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def contact_us(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "📬 *Contact Us*\n\nHave questions or need support?\nReach out via email: support@mytgbotafr.com\nOr DM @McKafuiElys",
+        "📬 *Contact Us*\n\nHave questions or need support?\nReach out via email: support@mytgbotafr.com\nOr DM @_uname_",
         parse_mode="Markdown"
     )
 
 # DM New Group Members
 async def welcome_new_member(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    invite_link = "https://t.me/TheCryptoEnthChannel"
+    invite_link = "https://t.me/@Channel"
 
     for member in update.message.new_chat_members:
         try:
@@ -42,7 +42,7 @@ async def welcome_new_member(update: Update, context: ContextTypes.DEFAULT_TYPE)
                 chat_id=member.id,
                 text=(
                     f"👋 Welcome, {member.first_name}!\n\n"
-                    f"Thanks for joining our group. We'll be sending feeds and suggestions on trades you should do📲. If you're not ready to learn, you can't earn 💡💵. #TheCryptoEnth @TheCryptoEnthChannel:\n"
+                    f"Thanks for joining our group. ..:\n"
                     f"{invite_link}"
                 )
             )
@@ -52,8 +52,8 @@ async def welcome_new_member(update: Update, context: ContextTypes.DEFAULT_TYPE)
 # /start command
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Replace these URLs with your actual Telegram links
-    channel_link = "https://t.me/TheCryptoEnthChannel"
-    group_link = "https://t.me/+LBY9s4T0fiJjNTVk"
+    channel_link = "https://t.me/@Channel"
+    group_link = "https://t.me/+Group"
 
     # Define inline buttons
     keyboard = [
